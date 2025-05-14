@@ -1,13 +1,19 @@
-[project]
+[tool.poetry]
 name = "doculens"
 version = "0.1.0"
 description = ""
-authors = [
-    { name = "Francesco Paolo Gentile", email = "fra.fran.francesco@gmail.com" }
-]
+authors = ["Francesco Paolo Gentile <fra.fran.francesco@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+streamlit = ">=1.45.0,<2.0.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+byaldi = ">=0.0.7,<0.0.8"
+claudette = ">=0.1.8,<0.2.0"
+langfuse = ">=2.60.4,<3.0.0"
+openai = "^1.78.1"
+aiofiles = "^24.1.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
