@@ -14,7 +14,7 @@ os.environ["ANTHROPIC_API_KEY"] = os.getenv("ANTHROPIC_API_KEY")
 # Initialize RAG Model
 RAG = RAGMultiModalModel.from_pretrained("vidore/colpali-v1.2", verbose=1)
 RAG.index(
-    input_path="../docs/attention.pdf",
+    input_path="./data/attention.pdf",
     index_name="attention",
     store_collection_with_index=True,
     overwrite=True,
@@ -25,7 +25,7 @@ claude_chat = Chat(models[1])
 gpt4o_model = GPT4OInferenceModel()
 
 # Streamlit App
-st.title("Multimodal Document Query App")
+st.title("Doculens - Multimodal Document Query App")
 
 # Query Section
 query = st.text_input("Enter your query", "Tell me what the BLEU score for the transformer base model is.")
