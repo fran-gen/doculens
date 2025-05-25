@@ -23,7 +23,7 @@ class GPT4OInferenceModel(BaseVLMInferenceModel):
 
     def __init__(
         self,
-        model_path: str = "obx-rnd/gpt-4o",
+        model_path: str = "gpt-4o",
         api_key: str | None = os.environ.get("OPENAI_API_KEY", None),
         base_url: str | None = os.environ.get("OPENAI_API_BASE", None),
     ):
